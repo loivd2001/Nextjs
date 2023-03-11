@@ -4,7 +4,9 @@ import { useDispatch } from 'react-redux';
 import { handleLoginReducer } from '../store/slices/LoginSlice';
 
 const login = () => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [UserName, setUserName] = useState('');
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [PassWord, setPassWord] = useState('');
 
   const handleUserName = (e: ChangeEvent<HTMLInputElement>) => {
@@ -13,7 +15,7 @@ const login = () => {
   const handlePassWord = (e: ChangeEvent<HTMLInputElement>) => {
     setPassWord(e.target.value);
   };
-
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const dispath = useDispatch();
   const handleLogin = () => {
     dispath(

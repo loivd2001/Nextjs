@@ -1,4 +1,4 @@
-import { useState ,useCallback} from 'react';
+import { useState} from 'react';
 import { NextPage } from 'next';
 import MyComponent from '../components/templates/MyComponent';
 const IndexPage: NextPage = () => {
@@ -6,9 +6,9 @@ const IndexPage: NextPage = () => {
   const [valueB, setValueB] = useState(0);
   const [sum, setSum] = useState(0);
 
-  const onChangeA = useCallback((e:React.ChangeEvent<HTMLInputElement>) => {
+  const onChangeA = (e:React.ChangeEvent<HTMLInputElement>) => {
     setValueA(Number(e.target.value));
-  },[valueA]);
+  };
   const onChangeB = (e:React.ChangeEvent<HTMLInputElement>) => {
     setValueB(Number(e.target.value));
   };
